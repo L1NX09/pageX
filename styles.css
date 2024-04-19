@@ -1,0 +1,224 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 1.5em;
+  position: absolute;
+  left: 20px;
+}
+
+.accent-color {
+  color: #00FF41;
+}
+
+/* Positioning the clock at the top and centering it */
+#clock {
+  position: absolute;
+  margin-bottom: 50px;
+  top: 10%; /* Adjust this value to move the clock higher or lower */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fdfdfd;
+  font-size: 11em; /* Increase the font size to make the clock bigger */
+  text-align: center;
+}
+
+.search-box {
+  width: 70%; /* Ensure the parent container spans the full width */
+  display: flex; /* Use flexbox to center the child element */
+  justify-content: center; /* Center the child element horizontally */
+}
+
+.search-box input[type="text"] {
+  padding: 20px 30px;
+  width: 70%; /* Or any width you prefer */
+  max-width: 500px; /* You can set a max-width to prevent it from getting too wide on larger screens */
+  margin: auto; /* This will automatically adjust the margin on both sides */
+  border-radius: 15px;
+  border: none;
+  margin-top: 150px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.075);
+  backdrop-filter: blur(20px);
+  border: 4px solid rgb(255, 255, 255);
+  outline: none;
+}
+
+
+.thumbnails {
+  display: flex;
+  justify-content: center; /* Center thumbnails */
+  margin-top: 50px;
+  width: 80%;
+  gap: 30px; /* Space between thumbnails */
+}
+
+.thumbnail {
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  background-color: #ffffff;
+  border-radius: 10px; /* Smooth corners */
+  border: 4px solid #fff; /* White border */
+  /* Other styles as needed */
+}
+
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+  object-position: center; /* Aligns the image properly within the container */
+}
+
+#greeting {
+  font-size: 50px; /* Adjust the size as needed */
+  /* Other styles */
+}
+
+#greeting {
+  position: absolute;
+  margin-top: 50px;
+  top: 35%; /* Adjust this value to move the clock higher or lower */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#date {
+  position: absolute;
+  margin-top: 50px;
+  top: 20%; /* Adjust this value to move the clock higher or lower */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white; /* eller annan färg */
+  font-size: 25px
+}
+
+.counter {
+display: flex;
+align-items: center;
+justify-content: center;
+/* Lägg till ytterligare styling enligt dina designbehov */
+}
+
+.arrow {
+background: none;
+border: none;
+color: white; /* Eller vilken färg du föredrar */
+font-size: 24px;
+padding: 10px;
+cursor: pointer;
+/* Lägg till ytterligare styling enligt dina designbehov */
+}
+
+#number {
+margin: 0 10px;
+color: white; /* Eller vilken färg du föredrar */
+}
+
+.number-selector {
+display: flex;
+align-items: center;
+gap: 20px;
+position: absolute;
+bottom: 100px; /* Center vertically */
+left: 50%; /* Center horizontally */
+z-index: 10;
+transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+}
+
+
+#decrease,
+#increase {
+font-size: 20px; /* Större font-storlek för pilarna */
+padding: 5px; /* Mer padding runt pilarna */
+cursor: pointer;
+}
+
+#number {
+margin: 0 10px;
+font-size: 30px; /* Större font-storlek för numret */
+/* Om du vill, kan du lägga till width och height för att göra boxen större */
+}
+
+.settings-container {
+display: none;
+z-index: 1;
+position: absolute;
+top: 80%; /* Center vertically */
+left: 50%; /* Center horizontally */
+transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+width: 500px; /* Your desired width */
+height: 200px; /* Your desired height */
+backdrop-filter: blur(20px);
+background-color: #3b3b3b3a; /* Your background color */
+border-radius: 20px; /* Optional: rounded corners */
+border: 6px solid #fff;
+}
+
+.background-title {
+position: absolute;
+bottom: 165px; /* Justera detta värde för att flytta texten uppåt eller nedåt */
+left: 50%;
+transform: translateX(-50%);
+color: #fff; /* eller den färg du föredrar */
+font-size: 2em; /* Justera detta värde för att ändra storleken på texten */
+z-index: 5; /* Se till att detta värde är högt nog för att texten inte ska täckas av andra element */
+}
+
+.color-picker {
+position: absolute; /* Fast på skärmen, ändra till 'absolute' om det ska vara relaterat till förälderelementet */
+width: 145px;  /* Önskad bredd */
+height: 55px;  /* Önskad höjd */
+bottom: -10px; /* 20px från botten av sidan */
+left: 50%; /* 20px från vänsterkanten av sidan */
+z-index: 10; /* Se till att det ligger ovanför andra element */
+transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+}
+
+.color-picker-label {
+  position: absolute;
+  bottom: 75px; /* Justera detta värde för att flytta texten uppåt eller nedåt */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff; /* eller den färg du föredrar */
+  font-size: 2em; /* Justera detta värde för att ändra storleken på texten */
+  z-index: 5; /* Se till att detta värde är högt nog för att texten inte ska täckas av andra element */
+}
+
+#toggle-settings {
+  border: 2px solid transparent;
+  background-color: gray; /* Grå bakgrund */
+  color: white;         /* Vit text */
+  padding: 10px 20px;   /* Lite padding för att göra knappen större */
+  border: none;         /* Ta bort standardkant */
+  border-radius: 5px;   /* Lägg till rundade hörn */
+  cursor: pointer;      /* Ändra muspekaren till en pekare när den hovras över knappen */
+  font-size: 1em;       /* Ställ in textstorlek */
+  /* Lägg till ytterligare stilar som behövs */
+}

@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Page-X",
+  "version": "1.0",
+  "description": "Page-X transforms your new tab into a sleek and modern start page, featuring a unique and sophisticated design.",
+  "permissions": ["activeTab"],
+  "chrome_url_overrides": {
+      "newtab": "index.html"
+  },
+  "icons": {
+      "16": "PageX_logo_crome.png",
+      "48": "PageX_logo_crome.png",
+      "128": "PageX_logo_crome.png"
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageX</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        #toggle-settings {
+            background-color: rgb(20, 20, 20);
+            color: white;
+            padding: 10px 20px;
+            border: 5px solid #FFFFFF;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            position: fixed; /* Fixerad position */
+            bottom: 20px;    /* 10px från botten */
+            left: 20px;     /* 10px från vänster */
+        }
+    </style>
+</head>
+<body>
+    <button id="toggle-settings">Inställningar</button> <!-- Button to toggle settings-container -->
+
+    <div class="background-container"></div>
+    <div class="container">
+        <header class="top-bar">
+            <div class="logo">PAGE<span class="accent-color">X</span></div>
+        </header>
+        <div id="clock"></div>
+        <div id="date"></div>
+        <div id="greeting"></div>
+        <form action="https://www.google.com/search" method="GET" class="search-box">
+            <input type="text" name="q" id="search-input" placeholder="Search:" required>
+            <button type="submit" style="display: none;">Search</button>
+        </form>
+        <div class="thumbnails">
+            <a href="https://www.youtube.com/" class="thumbnail">
+                <img src="https://cdn-icons-png.flaticon.com/512/121/121504.png" alt="Description of image 1">
+            </a>
+            <a href="https://chat.openai.com/" class="thumbnail">
+                <img src="https://static.vecteezy.com/system/resources/previews/021/608/790/original/chatgpt-logo-chat-gpt-icon-on-black-background-free-vector.jpg" alt="Description of image 2">
+            </a>
+            <a href="https://twitter.com/home" class="thumbnail">
+                <img src="https://im.rediff.com/news/2023/jul/24twitter.jpg?w=670&h=900" alt="Description of image 2">
+            </a>
+        </div>
+    </div>
+    <div class="settings-container">
+        <div class="background-title">Backgrounds</div>
+        <div class="background-switch-container">
+            <div class="number-selector">
+                <button id="decrease">&lt;</button>
+                <div id="number">1</div>
+                <button id="increase">&gt;</button>
+            </div>
+        </div>
+        <div class="color-picker-label">RGB</div>
+        <input type="color" id="colorPicker" class="color-picker">
+    </div>
+</body>
+</html>
